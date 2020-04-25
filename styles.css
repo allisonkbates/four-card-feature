@@ -1,3 +1,4 @@
+/* General Styles & Variables */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
 
 :root {
@@ -25,13 +26,7 @@ body {
 	padding: 0;
 }
 
-header {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	padding: 75px 20px 75px 20px;
-	text-align: center;
-}
+/* Font Styles */
 
 h1 {
 	color: var(--very-dark-blue);
@@ -61,10 +56,25 @@ p {
 	margin: 15px 15px;
 }
 
+.p1-header {
+	margin: 15px 10px;
+	max-width: 450px;
+}
+
+/* Layout & Page Elements */
+
+header {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 75px 20px 75px 20px;
+	text-align: center;
+}
+
 section {
 	border-radius: 8px;
 	margin: 0px 30px 30px 30px;
-	height: 220px;
+	height: 225px;
 	box-shadow: 0 10px 20px 10px var(--box-shadow-color);
 	padding: 15px;
 	position: relative;
@@ -83,7 +93,7 @@ section::before {
 
 img {
     float: right;
-    margin: 0px 15px 15px 15px;
+    margin: 15px 15px 15px 15px;
     height: 60px;
 }
 
@@ -108,3 +118,35 @@ footer {
 	padding: 30px 30px 15px 30px;
 	text-align: center;
 }
+
+/* Styles for Desktop */
+
+@media only screen and (min-width: 992px) {
+	section {
+  		max-width: 310px;
+  	}
+  	main {
+		display: grid;
+		grid-template-areas: ". . two . ."
+                       ". one two four ."
+                       ". one three four ."
+                       ". . three . .";
+  		grid-template-rows: 1fr 1fr 1fr 1fr;
+  		grid-template-columns: 1fr 370px 370px 370px 1fr; 
+  	}
+  	.section-one {
+  		grid-area: one;
+		margin-right: 0;
+		margin-left: 60px
+  	}
+  	.section-two {
+  		grid-area: two;
+  	}
+  	.section-three {
+  		grid-area: three;
+  	}
+  	.section-four {
+  		grid-area: four;
+  		margin-left: 0;
+  	}
+} 
