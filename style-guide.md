@@ -32,3 +32,8 @@ The designs were created to the following widths:
 
 - Family: [Poppins](https://fonts.google.com/specimen/Poppins)
 - Weights: 200, 400, 600
+
+### Allison's To Dos
+- Adjust font size for header in desktop views
+- Rename sections to divs & main to section
+- Give each div a little more breathing room
